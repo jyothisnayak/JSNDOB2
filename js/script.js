@@ -81,7 +81,7 @@ $ajaxUtils.sendGetRequest(
     document.querySelector("#main-content")
       .innerHTML = responseText;
   },
-  false);
+  true);
 });
 
 // Load the menu categories view
