@@ -87,7 +87,7 @@ $ajaxUtils.sendGetRequest(
 // Load the menu categories view
 dc.loadMenuCategories = function () {
   showLoading("#main-content");
-  $ajaxUtils.sendGetRequest(
+  $ ajaxUtils.sendGetRequest(
     allCategoriesUrl,
     buildAndShowCategoriesHTML);
 };
@@ -97,7 +97,7 @@ dc.loadMenuCategories = function () {
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
-  $ajaxUtils.sendGetRequest(
+  $ ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort,
     buildAndShowMenuItemsHTML);
 };
@@ -107,11 +107,11 @@ dc.loadMenuItems = function (categoryShort) {
 // from the server
 function buildAndShowCategoriesHTML (categories) {
   // Load title snippet of categories page
-  $ajaxUtils.sendGetRequest(
+  $ ajaxUtils.sendGetRequest(
     categoriesTitleHtml,
     function (categoriesTitleHtml) {
       // Retrieve single category snippet
-      $ajaxUtils.sendGetRequest(
+      $ ajaxUtils.sendGetRequest(
         categoryHtml,
         function (categoryHtml) {
           // Switch CSS class active to menu button
